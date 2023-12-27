@@ -139,12 +139,12 @@ func main() {
 	}()
 	// runtime.SetBlockProfileRate(1)
 
-	verbose := flag.Bool("v", false, "verbose")
+	verbose := flag.Bool("v", true, "verbose")
 	bs := binds{}
 	flag.Var(&bs, "bind", "bind to")
 	www := flag.String("www", "", "www data")
 	tcp := flag.Bool("tcp", false, "also listen on TCP")
-	enableQlog := flag.Bool("qlog", false, "output a qlog (in the same directory)")
+	enableQlog := flag.Bool("qlog", true, "output a qlog (in the same directory)")
 	flag.Parse()
 
 	logger := utils.DefaultLogger
